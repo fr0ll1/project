@@ -1,0 +1,29 @@
+.FormWrapper{
+    height: 40px;
+    width: 500px;
+    margin-left: 32px;
+    margin-top: 24px;
+    border-radius: 8px;
+    background: #eef3fc !important;
+    padding-bottom: 50px;
+}
+
+
+
+
+input[type="text"] {
+    display: block;
+    text-indent: 16px;
+    outline: none;
+    color: #04153E;
+    font-size: 16px;
+}
+
+input[type="text"]::placeholder{
+    opacity: 0.48;
+    color: #04153E;
+}
+
+input[type="text"]:focus{
+    color: #04153E;
+}

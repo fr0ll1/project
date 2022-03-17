@@ -1,0 +1,47 @@
+.testInput{
+    height: 40px;
+    width: 500px;
+    border-radius: 8px;
+    background: #3D75E4;
+
+
+}
+
+.testInput ::placeholder{
+    color: black;
+    opacity: 0.48;
+}
+
+.SaveButton button{
+    height: 40px;
+    width: 500px;
+    border-radius: 8px;
+    background: #3D75E4;
+    margin-top: 50px;
+    color:#FFFFFF ;
+    min-width: 100px;
+    appearance: none;
+    cursor: pointer;
+}
+.DashWrapper{
+    margin-left: 200px;
+    margin-top: 100px;
+}
+.FormWrapper{
+    margin-top: 50px;
+}
+
+
+.SaveButton button:hover {
+    background: #1d49aa;
+}
+
+.SaveButton button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #cbd6ee;
+}
+.SaveButton button[disabled] {
+    color: #FFFFFF;
+    background: #3D75E4;
+    cursor: not-allowed;
+}

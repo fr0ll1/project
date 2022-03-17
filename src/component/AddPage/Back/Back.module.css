@@ -1,0 +1,23 @@
+.Text{
+    font-family: Golos;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #3D75E4;
+    padding-left: 9px;
+    grid-template: "T";
+
+}
+
+.icon{
+    grid-template: "I";
+}
+
+.BackWrapper{
+    display: grid;
+    grid-template-areas: "I T";
+    grid-auto-columns:6px 58px;
+    padding-top: 34px;
+    padding-left: 32px;
+}

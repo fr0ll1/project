@@ -1,0 +1,18 @@
+.MenuHeader {
+    font-family: Golos;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    padding: 40px 0 32px 20px  ;
+}
+.icon{
+    margin-right:12px ;
+    margin-left: 35px ;
+}
+.arrow{
+    margin-left: 12px;
+}
+
+

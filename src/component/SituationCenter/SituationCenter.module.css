@@ -1,0 +1,23 @@
+.testForm {
+    height: 40px;
+    width: 400px;
+    background-color: #8dabe5;
+    margin: 10px 0;
+}
+
+.testForm input{
+    color: black;
+}
+
+.testButton{
+    height: 40px;
+    width: 400px;
+    left: 296px;
+    top: 688px;
+    margin: 10px 0;
+}
+
+.MainWrapper{
+    margin-left: 200px;
+    margin-top: 100px;
+}

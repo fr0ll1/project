@@ -1,0 +1,92 @@
+.AddWrapper{
+    display: grid;
+    grid-template-areas:
+            "L R"
+            "S S";
+    grid-template-columns:1fr 1fr;
+    grid-auto-rows: 660px 100px;
+}
+
+.LBlock{
+    grid-area: L;
+}
+
+.RBlock{
+    grid-area: R;
+
+}
+.SaveButton{
+    grid-area: S;
+    width: 100%;
+    text-align: center;
+    margin-top: 28px;
+}
+
+.SaveButton button{
+    height: 40px;
+    width: 1024px;
+    border-radius: 8px;
+    background: #3D75E4;
+    color:#FFFFFF ;
+    min-width: 100px;
+    appearance: none;
+    cursor: pointer;
+}
+
+.SaveButton button:hover {
+    background: #1d49aa;
+}
+
+.SaveButton button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #cbd6ee;
+}
+.SaveButton button:disabled{
+    opacity: 50%;
+}
+
+.Back{
+
+}
+
+.AddOrg{
+    font-family: Golos;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 32px;
+    color: #04153E;
+    padding-top: 30px;
+    padding-left: 32px;
+
+}
+
+.Provider{
+    font-family: Golos;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #04153E;
+    opacity: 0.48;
+    padding-top: 8px;
+    padding-left: 32px;
+    padding-bottom: 8px;
+}
+
+.Person{
+    float: right;
+    padding-top: 32px;
+    padding-right: 40px;
+    padding-bottom: 104px;
+}
+
+
+/*.Forms input{
+    color: #04153E;
+}*/
+
+.Forms::placeholder{
+    color: black;
+    opacity: 0.48;
+}
