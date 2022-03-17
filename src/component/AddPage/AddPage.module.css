@@ -33,11 +33,11 @@
     cursor: pointer;
 }
 
-.SaveButton button:hover {
+.SaveButton button:active:hover {
     background: #1d49aa;
 }
 
-.SaveButton button:focus {
+.SaveButton button:active:focus {
     outline: none;
     box-shadow: 0 0 0 4px #cbd6ee;
 }
