@@ -41,15 +41,20 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400}
     display: flex;
     background-color: #091F52;
     width: 1360px;
+    height: 760px;
 }
 
 .NavBar{
     flex: none;
     width: 264px;
+    /*width: 25.3%;*/
+
 }
 
 .MainContent{
-    flex-basis: 1096px;
+    flex: none;
+    width: 1096px;
+    /*flex: 1 1 auto;*/
     background: #FFFFFF;
     border-top-left-radius: 48px;
 }
