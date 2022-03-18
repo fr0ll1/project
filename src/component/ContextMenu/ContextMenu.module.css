@@ -1,5 +1,5 @@
 .MenuHeader {
-    font-family: Golos;
+    font-family: Golos-Bold;
     font-style: normal;
     font-weight: 800;
     font-size: 20px;
@@ -14,5 +14,7 @@
 .arrow{
     margin-left: 12px;
 }
+
+
 
 

@@ -66,7 +66,6 @@ const AddPage = () => {
             <div className={style.SaveButton}>
                 <button onClick={inputHandler} disabled={!formValid}> Сохранить</button>
             </div>
-            {console.log(mailError,orgError,selectError, formValid)}
         </div>
     );
 

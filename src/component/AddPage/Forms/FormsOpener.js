@@ -4,8 +4,6 @@ import style from './FormsOpener.module.css'
 const FormsOpener = (props) => {
     const {mail, org, setMail, setOrg, setMailError, setOrgError, setMailChaker, setOrgChaker, mailCheker} = props
 
-
-
     const mailHandler = (e) => {
         setMail(e.target.value)
         if (!e.target.value) {

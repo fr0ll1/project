@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: Golos-Bold;
+  src: local('Golos-Bold'), url(fonts/GolosText-Bold.woff) format('woff');
+}
+
+@font-face {
+  font-family: Golos-Medium;
+  src: local('Golos-Medium'), url(fonts/GolosText-Medium.woff) format('woff');
+}
+
+@font-face {
+  font-family: Golos-Regular;
+  src: local('Golos-Regular'), url(fonts/GolosText-Regular.woff) format('woff');
+}
+

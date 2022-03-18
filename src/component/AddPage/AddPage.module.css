@@ -31,6 +31,7 @@
     min-width: 100px;
     appearance: none;
     cursor: pointer;
+    font-family: Golos-Medium;
 }
 
 .SaveButton button:active:hover {
@@ -42,7 +43,7 @@
     box-shadow: 0 0 0 4px #cbd6ee;
 }
 .SaveButton button:disabled{
-    opacity: 50%;
+    opacity: 0.32;
 }
 
 .Back{
@@ -50,7 +51,7 @@
 }
 
 .AddOrg{
-    font-family: Golos;
+    font-family: Golos-Bold;
     font-style: normal;
     font-weight: 800;
     font-size: 28px;
@@ -62,7 +63,7 @@
 }
 
 .Provider{
-    font-family: Golos;
+    font-family: Golos-Regular;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;

@@ -4,30 +4,27 @@
     margin-left: 32px;
     margin-top: 24px;
     border-radius: 8px;
-    background: #eef3fc !important;
-
+    background: #eef3fc;
 }
 
-
-
-
-input[type="text"] {
+input {
     display: block;
     text-indent: 16px;
     outline: none;
     color: #04153E;
     font-size: 16px;
-    font-family: 'Golos';
+    font-family: 'Golos-Medium';
 }
 
-input[type="text"]::placeholder{
+input::placeholder{
     opacity: 0.48;
     color: #04153e;
     font-size: 16px;
-    font-family: 'Golos';
+    font-family: 'Golos-Medium';
 }
 
-input[type="text"]:focus{
+input:focus{
     color: #04153E;
     font-size: 16px;
+    font-family: 'Golos-Medium';
 }

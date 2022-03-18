@@ -1,12 +1,15 @@
 import React, {useState} from 'react';
 import style from './Choice.module.css';
-import {ReactComponent as Arrow} from "../../../svg/arrow.svg";
+import {ReactComponent as ArrowTop} from "../../../svg/arrow.svg";
+import {ReactComponent as ArrowBot} from "../../../svg/arrow-up_16.svg";
+
+
 
 const Choice = (props) => {
     const [active, setActive] = useState(false);
 
 
-    const options = ['test1', 'test2', 'test3'];
+    const options = ['Тест1', 'Тест2', 'Тест3'];
 
     const {isSelect, setIsSelect, setSelectError} = props
 
@@ -17,8 +20,8 @@ const Choice = (props) => {
             }}>
                 <span className={style.oneEl}>{isSelect}</span>
                 {active === false ?
-                    (<span className={style.twoEl}><Arrow/></span>) :
-                    (<span className={style.twoEl}>top</span>)
+                    (<span className={style.twoEl}><ArrowTop/></span>) :
+                    (<span className={style.twoEl}><ArrowBot color='blue'/></span>)
                 }
             </div>
             {active && (

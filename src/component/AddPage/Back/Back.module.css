@@ -1,16 +1,16 @@
 .Text{
-    font-family: Golos;
+    font-family: Golos-Medium;
     font-style: normal;
-    font-weight: 500;
     font-size: 16px;
     line-height: 20px;
     color: #3D75E4;
-    padding-left: 9px;
+    padding-left: 8px;
     grid-template: "T";
 
 }
 
 .icon{
+    padding-top: 2px;
     grid-template: "I";
 }
 
