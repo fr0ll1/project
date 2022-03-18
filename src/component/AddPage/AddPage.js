@@ -16,6 +16,8 @@ const AddPage = () => {
     const [selectError, setSelectError] = useState("Необходимо выбрать!")
     const [mailError, setMailError] = useState('Поле не может быть пустым')
     const [orgError, setOrgError] = useState('Поле не может быть пустым')
+    const [mailCheker, setMailChaker] = useState(false)
+    const [orgCheker, setOrgChaker] = useState(false)
 
     useEffect(() => {
             if (mailError || orgError || selectError) {
@@ -27,13 +29,16 @@ const AddPage = () => {
     )
 
     const inputHandler = () => {
-        console.log(org)
-        console.log(mail)
-        console.log(isSelect)
+        console.log('Наименование организации:', org)
+        console.log('Имеил:', mail)
+        console.log('Статус:', isSelect)
         setOrg('')
         setMail('')
         setIsSelect('Статус')
         setFormValid(false)
+        setSelectError("Необходимо выбрать!")
+        setMailError('Поле не может быть пустым')
+        setOrgError('Поле не может быть пустым')
     }
 
     return (
@@ -44,7 +49,8 @@ const AddPage = () => {
                 <div className={style.Provider}>Поставщик</div>
 
                 <FormsOpener setFormValid={setFormValid} org={org} mail={mail} setOrg={setOrg} setMail={setMail}
-                             setMailError={setMailError} setOrgError={setOrgError}/>
+                             setMailError={setMailError} setOrgError={setOrgError} setMailChaker={setMailChaker}
+                             setOrgChaker={setOrgChaker} mailCheker={mailCheker} orgCheker={orgCheker}/>
 
                 <Choice isSelect={isSelect} setIsSelect={setIsSelect} setSelectError={setSelectError}/>
 
@@ -60,7 +66,7 @@ const AddPage = () => {
             <div className={style.SaveButton}>
                 <button onClick={inputHandler} disabled={!formValid}> Сохранить</button>
             </div>
-
+            {console.log(mailError,orgError,selectError, formValid)}
         </div>
     );
 
