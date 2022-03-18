@@ -30,7 +30,7 @@ function ContextMenu() {
     return (
         <div className={style.Menu}>
             <div className={style.MenuHeader}>
-                <NavLink to='/' className={style.MenuHeader}> Личный кабинет</NavLink>
+                <NavLink to='/' className={style.MenuBtn}> Личный кабинет</NavLink>
             </div>
             <nav className={style.MenuBody}>
                 <ul className={style.MenuUl}>

@@ -5,8 +5,16 @@
     font-size: 20px;
     line-height: 24px;
     color: #FFFFFF;
-    padding: 40px 0 32px 20px  ;
+    padding: 40px 0 32px 30px;
+    width: 264px;
+    height: 96px ;
 }
+
+.MenuBtn{
+    color: #FFFFFF;
+    padding: 10px;
+}
+
 .icon{
     margin-right:12px ;
     margin-left: 35px ;
