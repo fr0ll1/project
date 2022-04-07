@@ -35,26 +35,36 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400}
 
 .App{
     background-color: #E5E5E5;
+    height: 100%;
 }
 
-.container{
+.AppWrapper{
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
+}
+
+.Container{
+
     background-color: #091F52;
-    width: 1360px;
-    height: 760px;
+    min-height: 100vh;
+}
+
+.ContainerWrapper{
+    flex: 1 1 auto;
+    display: flex;
 }
 
 .NavBar{
     flex: none;
-    width: 264px;
-    /*width: 25.3%;*/
+    width: 25.3%;
 
 }
 
 .MainContent{
     flex: none;
-    width: 1096px;
-    /*flex: 1 1 auto;*/
+    flex: 1 1 auto;
+    min-height: 100vh;
     background: #FFFFFF;
     border-top-left-radius: 48px;
 }

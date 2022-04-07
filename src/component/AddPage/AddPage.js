@@ -44,7 +44,9 @@ const AddPage = () => {
     return (
         <div className={style.AddWrapper}>
             <div className={style.LBlock}>
+
                 <Back/>
+
                 <div className={style.AddOrg}>Добавление организации</div>
                 <div className={style.Provider}>Поставщик</div>
 
@@ -53,8 +55,6 @@ const AddPage = () => {
                              setOrgChaker={setOrgChaker} mailCheker={mailCheker} orgCheker={orgCheker}/>
 
                 <Choice isSelect={isSelect} setIsSelect={setIsSelect} setSelectError={setSelectError}/>
-
-
             </div>
             <div className={style.RBlock}>
                 <div className={style.Person}>

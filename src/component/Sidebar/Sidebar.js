@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import style from './ContextMenu.module.css'
+import style from './Sidebar.module.css'
 import Elements from "./Elements/Elements";
 import {NavLink} from "react-router-dom";
 import {ReactComponent as Dash} from "../../svg/Dash.svg";
@@ -23,7 +23,7 @@ import OpeningElement from "./OpeningElement/OpeningElement";
 import DropDawnElement from "./DropDawnElement/DropDawnElement";
 
 
-function ContextMenu() {
+function Sidebar() {
 
     const [activeItem,setActiveItem]= useState(null)
 
@@ -32,8 +32,8 @@ function ContextMenu() {
             <div className={style.MenuHeader}>
                 <NavLink to='/' className={style.MenuBtn}> Личный кабинет</NavLink>
             </div>
-            <nav className={style.MenuBody}>
-                <ul className={style.MenuUl}>
+            <div className={style.MenuBody}>
+                <div className={style.MenuUl}>
                     <Elements path='/Dash'
                               name='Дашборд'
                               icon={<Dash className={style.icon}/>}
@@ -241,11 +241,11 @@ function ContextMenu() {
                             />
                         </ul>}>
                     </OpeningElement>
-                </ul>
-            </nav>
+                </div>
+            </div>
 
         </div>
     )
 }
 
-export default ContextMenu;
+export default Sidebar;

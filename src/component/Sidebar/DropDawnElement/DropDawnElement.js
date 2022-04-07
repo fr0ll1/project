@@ -6,15 +6,17 @@ import {NavLink} from "react-router-dom";
 
 function DropDawnElement(props) {
     return (
-        <li>
-            <div className={style.FullElement}>
-                <NavLink to={props.path} className={style.MenuBtn}>
+
+        <div className={style.FullElement}>
+            <NavLink to={props.path}>
+                <div className={style.MenuBtn}>
                     {props.icon}
                     {props.name}
                     {props.open}
-                </NavLink>
-            </div>
-        </li>
+                </div>
+            </NavLink>
+        </div>
+
     )
 }
 

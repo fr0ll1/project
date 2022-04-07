@@ -1,22 +1,24 @@
 .MenuBtn{
-    height: 44px;
-    width: 264px;
     font-family: Golos-Medium;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 20px;
     color: #FFFF;
-    opacity: 0.72;
-    padding-top: 12px;
-    cursor: pointer;
+    padding: 12px 0;
 }
 
 .FullElement{
     background: #091F52;
+    opacity: 0.72;
+    width: 100%;
+    height: 44px;
 }
 
 .FullElement:hover{
     background: #04153E;
-    transition: all 0.2s;
 }
+
+
+
+
+

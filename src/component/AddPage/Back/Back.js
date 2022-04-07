@@ -5,14 +5,18 @@ import {NavLink} from "react-router-dom";
 
 const Back = () => {
     return (
-        <div className={style.BackWrapper}>
-            <div className={style.icon}>
-                <LeftArrow/>
+            <div className={style.container}>
+            <NavLink to='/'>
+                <div className={style.BackWrapper}>
+                <div className={style.icon}>
+                    <LeftArrow/>
+                </div>
+                <p className={style.Text}>
+                    Назад
+                </p>
+                </div>
+            </NavLink>
             </div>
-            <div className={style.Text}>
-                <NavLink to='/'>Назад</NavLink>
-            </div>
-        </div>
     );
 };
 

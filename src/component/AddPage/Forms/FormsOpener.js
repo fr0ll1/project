@@ -38,16 +38,16 @@ const FormsOpener = (props) => {
 
     return (
         <div>
-            <div className={style.FormWrapper}>
-                <input onChange={e => orgHandler(e)} value={org} onBlur={e => blurHandler(e)} name='org' type='text'
+            <>
+                <input className={style.FormWrapper} onChange={e => orgHandler(e)} value={org} onBlur={e => blurHandler(e)} name='org' type='text'
                        placeholder='Наименование организации'/>
                 {/*{(orgCheker && orgError) && <div style={{color:'black'}}> {console.log('Ошибка поля Доб.орг:', orgError)}  </div>}*/}
-            </div>
-            <div className={style.FormWrapper}>
-                <input onChange={e => mailHandler(e)} value={mail} onBlur={e => blurHandler(e)} name='mail' type='text'
+            </>
+            < >
+                <input className={style.FormWrapper} onChange={e => mailHandler(e)} value={mail} onBlur={e => blurHandler(e)} name='mail' type='text'
                        placeholder='Имейл'/>
                 {/*{(mailCheker && mailError) && <div style={{color:'black'}}> {console.log('Ошибка поля Имеил:', mailError)}  </div>}*/}
-            </div>
+            </>
         </div>
     );
 };

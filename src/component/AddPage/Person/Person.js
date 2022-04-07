@@ -11,7 +11,6 @@ const Person = (props) => {
             </div>
             <div className={style.Info}>
                 <div className={style.Name}>{props.name}</div>
-                <p/>
                 <div className={style.Position}>{props.Position}</div>
             </div>
         </div>
