@@ -4,9 +4,11 @@ import style from './Dash.module.css'
 const Dash = () => {
 
 
+
+
     return (
-        <div className={style.DashWrapper}>
-            Dash
+        <div className={style.mainWrapper}>
+           Dash
         </div>
 
 

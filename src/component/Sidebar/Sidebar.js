@@ -27,6 +27,80 @@ function Sidebar() {
 
     const [activeItem,setActiveItem]= useState(null)
 
+    let InfoForNotOpenButtonOnSidebar = [
+        {path :'/Dash', name:'Дашборд', icon: <Dash className={style.icon}/> },
+        {path :'/SituationCenter', name:'Ситуационный центр', icon: <SituationCenter className={style.icon}/>},
+        {path :'/AnActiveCitizen', name:'Активный гражданин', icon: <AnActiveCitizen className={style.icon}/>}
+    ]
+
+    let InfoForButtonForDropDawnElement = [
+        {path:'/Gis', name:'ГИС ЖКХ', icon:<ColdWater16 className={style.icon}/>},
+        {path:'/Asudd', name:'АСУДД', icon:<Canalization className={style.icon}/>},
+        {path:'/Energy', name:'Электропитание', icon:<Electric className={style.icon}/>},
+        {path:'/BS', name:'БС сотовой связи', icon:<Telephone className={style.icon}/>},
+        {path:'/Trash', name:'Мусор', icon:<TKO className={style.icon}/>},
+        {path:'/Speed', name:'Счётчики', icon:<Speed className={style.icon}/>},
+        {path:'/Manager', name:'Диспетчер лифтов', icon:<Monitoring className={style.icon}/>}
+    ]
+
+    let ButtonForDropDawnElement = InfoForButtonForDropDawnElement.map((el)=><DropDawnElement path={el.path} name={el.name} icon={el.icon}/>)
+
+    let NotOpenButtonOnSidebar = InfoForNotOpenButtonOnSidebar.map((el) => <Elements path={el.path} name={el.name} icon={el.icon}/>)
+
+
+    let ButtonForOpeningElement = [
+        <OpeningElement
+            name='Службы города'
+            type='CityServices'
+            active={activeItem}
+            onOpen={setActiveItem}
+            icon={<CityServices className={style.icon}/>}
+            open={<ArrowDown className={style.arrow}/>}
+            close={<ArrowUp className={style.arrow}/>}
+            item={<ul>{ButtonForDropDawnElement}</ul>}
+        />,
+        <OpeningElement
+            name='Бизнес'
+            activeType='Business'
+            active={activeItem}
+            onOpen={setActiveItem}
+            icon={<Business className={style.icon}/>}
+            open={<ArrowDown className={style.arrow}/>}
+            close={<ArrowUp className={style.arrow}/>}
+            item={<ul>{ButtonForDropDawnElement}</ul>}
+            />,
+        <OpeningElement
+            name='Платные услуги'
+            activeType='PaidServices'
+            active= {activeItem}
+            onOpen={setActiveItem}
+            icon={<PaidServices className={style.icon}/>}
+            open={<ArrowDown className={style.arrow}/>}
+            close={<ArrowUp className={style.arrow}/>}
+            item={<ul>{ButtonForDropDawnElement}</ul>}
+            />,
+        <OpeningElement
+            name='Безопасность'
+            activeType='Safety'
+            active={activeItem}
+            onOpen={setActiveItem}
+            icon={<Safety className={style.icon}/>}
+            open={<ArrowDown className={style.arrow}/>}
+            close={<ArrowUp className={style.arrow}/>}
+            item={<ul>{ButtonForDropDawnElement}</ul>}
+            />,
+        <OpeningElement
+            name='Инфраструктура'
+            activeType='Infrastructure'
+            active={activeItem}
+            onOpen={setActiveItem}
+            icon={<Infrastructure className={style.icon}/>}
+            open={<ArrowDown className={style.arrow}/>}
+            close={<ArrowUp className={style.arrow}/>}
+            item={<ul>{ButtonForDropDawnElement}</ul>}
+            />
+    ]
+
     return (
         <div className={style.Menu}>
             <div className={style.MenuHeader}>
@@ -34,216 +108,10 @@ function Sidebar() {
             </div>
             <div className={style.MenuBody}>
                 <div className={style.MenuUl}>
-                    <Elements path='/Dash'
-                              name='Дашборд'
-                              icon={<Dash className={style.icon}/>}
-                    />
-                    <Elements path='/SituationCenter'
-                              name='Ситуационный центр'
-                              icon={<SituationCenter className={style.icon}/>}
-                    />
-                    <Elements path='/AnActiveCitizen'
-                              name='Активный гражданин'
-                              icon={<AnActiveCitizen className={style.icon}/>}
-                    />
-                    <OpeningElement
-                        name='Службы города'
-                        type='CityServices'
-                        active={activeItem}
-                        onOpen={setActiveItem}
-                        icon={<CityServices className={style.icon}/>}
-                        open={<ArrowDown className={style.arrow}/>}
-                        close={<ArrowUp className={style.arrow}/>}
-                        item={<ul>
-                            <DropDawnElement path='/Gis'
-                                             name='ГИС ЖКХ'
-                                             icon={<ColdWater16 className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/Asudd'
-                                             name='АСУДД'
-                                             icon={<Canalization className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/Energy'
-                                             name='Электропитание'
-                                             icon={<Electric className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/BS'
-                                             name='БС сотовой связи'
-                                             icon={<Telephone className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/Trash'
-                                             name='Мусор'
-                                             icon={<TKO className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/Speed'
-                                             name='Счётчики'
-                                             icon={<Speed className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/Manager'
-                                             name='Диспетчер лифтов'
-                                             icon={<Monitoring className={style.icon}/>}
-                            />
-                        </ul>}>
-                    </OpeningElement>
-                    <OpeningElement
-                        name='Бизнес'
-                        activeType='Business'
-                        active={activeItem}
-                        onOpen={setActiveItem}
-                        icon={<Business className={style.icon}/>}
-                        open={<ArrowDown className={style.arrow}/>}
-                        close={<ArrowUp className={style.arrow}/>}
-                        item={<ul>
-                            <DropDawnElement path='/Gis'
-                                             name='ГИС ЖКХ'
-                                             icon={<ColdWater16 className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/Asudd'
-                                             name='АСУДД'
-                                             icon={<Canalization className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/Energy'
-                                             name='Электропитание'
-                                             icon={<Electric className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/BS'
-                                             name='БС сотовой связи'
-                                             icon={<Telephone className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/Trash'
-                                             name='Мусор'
-                                             icon={<TKO className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/Speed'
-                                             name='Счётчики'
-                                             icon={<Speed className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/Manager'
-                                             name='Диспетчер лифтов'
-                                             icon={<Monitoring className={style.icon}/>}
-                            />
-                        </ul>}>
-                    </OpeningElement>
-                    <OpeningElement
-                        name='Платные услуги'
-                        activeType='PaidServices'
-                        active={activeItem}
-                        onOpen={setActiveItem}
-                        icon={<PaidServices className={style.icon}/>}
-                        open={<ArrowDown className={style.arrow}/>}
-                        close={<ArrowUp className={style.arrow}/>}
-                        item={<ul>
-                            <DropDawnElement path='/Gis'
-                                             name='ГИС ЖКХ'
-                                             icon={<ColdWater16 className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/Asudd'
-                                             name='АСУДД'
-                                             icon={<Canalization className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/Energy'
-                                             name='Электропитание'
-                                             icon={<Electric className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/BS'
-                                             name='БС сотовой связи'
-                                             icon={<Telephone className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/Trash'
-                                             name='Мусор'
-                                             icon={<TKO className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/Speed'
-                                             name='Счётчики'
-                                             icon={<Speed className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/Manager'
-                                             name='Диспетчер лифтов'
-                                             icon={<Monitoring className={style.icon}/>}
-                            />
-                        </ul>}>
-                    </OpeningElement>
-                    <OpeningElement
-                        name='Безопасность'
-                        activeType='Safety'
-                        active={activeItem}
-                        onOpen={setActiveItem}
-                        icon={<Safety className={style.icon}/>}
-                        open={<ArrowDown className={style.arrow}/>}
-                        close={<ArrowUp className={style.arrow}/>}
-                        item={<ul>
-                            <DropDawnElement path='/Gis'
-                                             name='ГИС ЖКХ'
-                                             icon={<ColdWater16 className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/Asudd'
-                                             name='АСУДД'
-                                             icon={<Canalization className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/Energy'
-                                             name='Электропитание'
-                                             icon={<Electric className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/BS'
-                                             name='БС сотовой связи'
-                                             icon={<Telephone className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/Trash'
-                                             name='Мусор'
-                                             icon={<TKO className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/Speed'
-                                             name='Счётчики'
-                                             icon={<Speed className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/Manager'
-                                             name='Диспетчер лифтов'
-                                             icon={<Monitoring className={style.icon}/>}
-                            />
-                        </ul>}>
-                    </OpeningElement>
-                    <OpeningElement
-                        name='Инфраструктура'
-                        activeType='Infrastructure'
-                        active={activeItem}
-                        onOpen={setActiveItem}
-                        icon={<Infrastructure className={style.icon}/>}
-                        open={<ArrowDown className={style.arrow}/>}
-                        close={<ArrowUp className={style.arrow}/>}
-                        item={<ul>
-                            <DropDawnElement path='/Gis'
-                                             name='ГИС ЖКХ'
-                                             icon={<ColdWater16 className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/Asudd'
-                                             name='АСУДД'
-                                             icon={<Canalization className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/Energy'
-                                             name='Электропитание'
-                                             icon={<Electric className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/BS'
-                                             name='БС сотовой связи'
-                                             icon={<Telephone className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/Trash'
-                                             name='Мусор'
-                                             icon={<TKO className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/Speed'
-                                             name='Счётчики'
-                                             icon={<Speed className={style.icon}/>}
-                            />
-                            <DropDawnElement path='/Manager'
-                                             name='Диспетчер лифтов'
-                                             icon={<Monitoring className={style.icon}/>}
-                            />
-                        </ul>}>
-                    </OpeningElement>
+                    {NotOpenButtonOnSidebar}
+                    {ButtonForOpeningElement}
                 </div>
             </div>
-
         </div>
     )
 }
