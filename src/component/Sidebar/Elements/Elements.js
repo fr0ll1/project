@@ -7,15 +7,15 @@ import {NavLink} from "react-router-dom";
 function Elements(props) {
     return (
 
-            <div className={style.FullElement}>
-                <NavLink to={props.path}>
-                    <div className={style.MenuBtn}>
+        <div className={style.FullElement}>
+            <NavLink to={props.path}>
+                <div className={style.MenuBtn}>
                     {props.icon}
                     {props.name}
                     {props.open}
-                    </div>
-                </NavLink>
-            </div>
+                </div>
+            </NavLink>
+        </div>
     )
 }
 

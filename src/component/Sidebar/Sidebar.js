@@ -25,93 +25,90 @@ import DropDawnElement from "./DropDawnElement/DropDawnElement";
 
 function Sidebar() {
 
-    const [activeItem,setActiveItem]= useState(null)
+    const [activeItem, setActiveItem] = useState(null)
+
+
+    let arrowIcon =(activeType)=>{
+
+        if (activeItem === activeType) {
+            return <ArrowUp className={style.arrow}/>
+            } else {
+            return <ArrowDown className={style.arrow}/>}
+    }
+
+
 
     let InfoForNotOpenButtonOnSidebar = [
-        {path :'/Dash', name:'Дашборд', icon: <Dash className={style.icon}/> },
-        {path :'/SituationCenter', name:'Ситуационный центр', icon: <SituationCenter className={style.icon}/>},
-        {path :'/AnActiveCitizen', name:'Активный гражданин', icon: <AnActiveCitizen className={style.icon}/>}
+        {path: '/Dash', name: 'Дашборд', icon: <Dash className={style.icon}/>},
+        {path: '/SituationCenter', name: 'Ситуационный центр', icon: <SituationCenter className={style.icon}/>},
+        {path: '/AnActiveCitizen', name: 'Активный гражданин', icon: <AnActiveCitizen className={style.icon}/>}
     ]
 
     let InfoForButtonForDropDawnElement = [
-        {path:'/Gis', name:'ГИС ЖКХ', icon:<ColdWater16 className={style.icon}/>},
-        {path:'/Asudd', name:'АСУДД', icon:<Canalization className={style.icon}/>},
-        {path:'/Energy', name:'Электропитание', icon:<Electric className={style.icon}/>},
-        {path:'/BS', name:'БС сотовой связи', icon:<Telephone className={style.icon}/>},
-        {path:'/Trash', name:'Мусор', icon:<TKO className={style.icon}/>},
-        {path:'/Speed', name:'Счётчики', icon:<Speed className={style.icon}/>},
-        {path:'/Manager', name:'Диспетчер лифтов', icon:<Monitoring className={style.icon}/>}
+        {path: '/Gis', name: 'ГИС ЖКХ', icon: <ColdWater16 className={style.icon}/>},
+        {path: '/Asudd', name: 'АСУДД', icon: <Canalization className={style.icon}/>},
+        {path: '/Energy', name: 'Электропитание', icon: <Electric className={style.icon}/>},
+        {path: '/BS', name: 'БС сотовой связи', icon: <Telephone className={style.icon}/>},
+        {path: '/Trash', name: 'Мусор', icon: <TKO className={style.icon}/>},
+        {path: '/Speed', name: 'Счётчики', icon: <Speed className={style.icon}/>},
+        {path: '/Manager', name: 'Диспетчер лифтов', icon: <Monitoring className={style.icon}/>}
     ]
 
-    let ButtonForDropDawnElement = InfoForButtonForDropDawnElement.map((el)=><DropDawnElement path={el.path} name={el.name} icon={el.icon}/>)
+    let ButtonForDropDawnElement = InfoForButtonForDropDawnElement.map(
+        (el) => <DropDawnElement path={el.path} name={el.name} icon={el.icon}/>)
 
-    let NotOpenButtonOnSidebar = InfoForNotOpenButtonOnSidebar.map((el) => <Elements path={el.path} name={el.name} icon={el.icon}/>)
+    let NotOpenButtonOnSidebar = InfoForNotOpenButtonOnSidebar.map((el) =>
+        <Elements path={el.path} name={el.name} icon={el.icon}/>)
 
+    let InfoForButtonForOpeningElement = [
+        {
+            name: 'Службы города', activeType: 'CityServices', activeItem: activeItem, setActiveItem: setActiveItem,
+            icon: <CityServices className={style.icon}/>, item: <ul>{ButtonForDropDawnElement}</ul>,
+            arrowIcon:arrowIcon
+        },
 
-    let ButtonForOpeningElement = [
-        <OpeningElement
-            name='Службы города'
-            type='CityServices'
-            active={activeItem}
-            onOpen={setActiveItem}
-            icon={<CityServices className={style.icon}/>}
-            open={<ArrowDown className={style.arrow}/>}
-            close={<ArrowUp className={style.arrow}/>}
-            item={<ul>{ButtonForDropDawnElement}</ul>}
-        />,
-        <OpeningElement
-            name='Бизнес'
-            activeType='Business'
-            active={activeItem}
-            onOpen={setActiveItem}
-            icon={<Business className={style.icon}/>}
-            open={<ArrowDown className={style.arrow}/>}
-            close={<ArrowUp className={style.arrow}/>}
-            item={<ul>{ButtonForDropDawnElement}</ul>}
-            />,
-        <OpeningElement
-            name='Платные услуги'
-            activeType='PaidServices'
-            active= {activeItem}
-            onOpen={setActiveItem}
-            icon={<PaidServices className={style.icon}/>}
-            open={<ArrowDown className={style.arrow}/>}
-            close={<ArrowUp className={style.arrow}/>}
-            item={<ul>{ButtonForDropDawnElement}</ul>}
-            />,
-        <OpeningElement
-            name='Безопасность'
-            activeType='Safety'
-            active={activeItem}
-            onOpen={setActiveItem}
-            icon={<Safety className={style.icon}/>}
-            open={<ArrowDown className={style.arrow}/>}
-            close={<ArrowUp className={style.arrow}/>}
-            item={<ul>{ButtonForDropDawnElement}</ul>}
-            />,
-        <OpeningElement
-            name='Инфраструктура'
-            activeType='Infrastructure'
-            active={activeItem}
-            onOpen={setActiveItem}
-            icon={<Infrastructure className={style.icon}/>}
-            open={<ArrowDown className={style.arrow}/>}
-            close={<ArrowUp className={style.arrow}/>}
-            item={<ul>{ButtonForDropDawnElement}</ul>}
-            />
+        {
+            name: 'Бизнес', activeType: 'Business', activeItem: activeItem, setActiveItem: setActiveItem,
+            icon: <Business className={style.icon}/>, item: <ul>{ButtonForDropDawnElement}</ul>,
+            arrowIcon:arrowIcon
+        },
+
+        {
+            name: 'Платные услуги', activeType: 'PaidServices', activeItem: activeItem, setActiveItem: setActiveItem,
+            icon: <PaidServices className={style.icon}/>, item: <ul>{ButtonForDropDawnElement}</ul>,
+            arrowIcon:arrowIcon
+        },
+
+        {
+            name: 'Безопасность', activeType: 'Safety', activeItem: activeItem, setActiveItem: setActiveItem,
+            icon: <Safety className={style.icon}/>, item: <ul>{ButtonForDropDawnElement}</ul>,
+            arrowIcon:arrowIcon
+        },
+
+        {
+            name: 'Инфраструктура', activeType: 'Infrastructure', activeItem: activeItem, setActiveItem: setActiveItem,
+            icon: <Infrastructure className={style.icon}/>, item: <ul>{ButtonForDropDawnElement}</ul>,
+            arrowIcon:arrowIcon
+        }
+
     ]
+
+    let ButtonForOpeningElement = InfoForButtonForOpeningElement.map((el) =>
+        <OpeningElement name={el.name} activeType={el.activeType} activeItem={el.activeItem}
+                        setActiveItem={el.setActiveItem} icon={el.icon}
+                        item={el.item} arrowIcon={el.arrowIcon}
+        />
+    )
 
     return (
-        <div className={style.Menu}>
+        <div >
             <div className={style.MenuHeader}>
                 <NavLink to='/' className={style.MenuBtn}> Личный кабинет</NavLink>
             </div>
-            <div className={style.MenuBody}>
-                <div className={style.MenuUl}>
+                <div>
                     {NotOpenButtonOnSidebar}
                     {ButtonForOpeningElement}
                 </div>
-            </div>
         </div>
     )
 }

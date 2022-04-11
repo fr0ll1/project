@@ -1,12 +1,11 @@
 .FormWrapper{
     height: 40px;
     width: 500px;
-    margin-left: 32px;
     margin-top: 24px;
     border-radius: 8px;
     background: #eef3fc;
     margin-right: 8px;
-margin-left: auto;
+    margin-left: auto;
 }
 
 input {

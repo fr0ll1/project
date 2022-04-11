@@ -1,36 +1,31 @@
-import React, {useState} from "react";
+import React from "react";
 import style from './OpeningElement.module.css'
 
 function Elements(props) {
-    const [openClauseChecker, setOpenClauseChecker] = useState(true)
 
-    const {activeType, active, onOpen} = props
+    const {activeType, activeItem, setActiveItem, icon, name, arrowIcon} = props
 
     const openerHandler = () => {
-        setOpenClauseChecker(!openClauseChecker)
-        openClauseChecker === true ? (
-            onOpen(activeType)
-        ) : (onOpen(null))
+        activeItem === activeType ?
+            (setActiveItem(null)) :
+            (setActiveItem(activeType))
     }
 
-
     return (
-
         <div className={style.FullElement}>
             <div className={style.MenuBtn} onClick={openerHandler}>
-                {props.icon}
-                {props.name}
-                {active === activeType ? props.close : props.open}
+                {icon}
+                {name}
+                {arrowIcon(activeType)}
             </div>
             {
-                active === activeType &&
+                activeItem === activeType &&
                 <div>
                     {props.item}
                 </div>
             }
 
         </div>
-
     )
 }
 

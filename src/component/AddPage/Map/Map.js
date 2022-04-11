@@ -8,7 +8,7 @@ const Map = () => {
 
     return (
         <div className={style.MapImg}>
-        <img src={MApIMG}/>
+        <img src={MApIMG} width="508" height="480"/>
         </div>
     )
 };

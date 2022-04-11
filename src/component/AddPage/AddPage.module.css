@@ -22,14 +22,12 @@
     margin-top: 28px;
 }
 
-.SaveButton button{
+ button{
     height: 40px;
     width: 1024px;
     border-radius: 8px;
     background: #3D75E4;
     color:#FFFFFF ;
-    min-width: 100px;
-    appearance: none;
     cursor: pointer;
     font-family: Golos-Medium;
 }
