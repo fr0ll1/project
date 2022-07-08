@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import style from './FormsOpener.module.css'
+import React, {useEffect, useState} from 'react'
+import s from './formsOpener.module.css'
 
 const FormsOpener = (props) => {
     const {mail, org, setMail, setOrg, setMailError, setOrgError, setMailChaker, setOrgChaker, mailCheker} = props
@@ -39,17 +39,26 @@ const FormsOpener = (props) => {
     return (
         <div>
             <>
-                <input className={style.FormWrapper} onChange={e => orgHandler(e)} value={org} onBlur={e => blurHandler(e)} name='org' type='text'
+                <input className={s.FormWrapper}
+                       onChange={e => orgHandler(e)}
+                       value={org}
+                       onBlur={e => blurHandler(e)}
+                       name='org'
+                       type='text'
                        placeholder='Наименование организации'/>
                 {/*{(orgCheker && orgError) && <div style={{color:'black'}}> {console.log('Ошибка поля Доб.орг:', orgError)}  </div>}*/}
             </>
             < >
-                <input className={style.FormWrapper} onChange={e => mailHandler(e)} value={mail} onBlur={e => blurHandler(e)} name='mail' type='text'
+                <input className={s.FormWrapper}
+                       onChange={e => mailHandler(e)}
+                       value={mail} onBlur={e => blurHandler(e)}
+                       name='mail'
+                       type='text'
                        placeholder='Имейл'/>
                 {/*{(mailCheker && mailError) && <div style={{color:'black'}}> {console.log('Ошибка поля Имеил:', mailError)}  </div>}*/}
             </>
         </div>
-    );
-};
+    )
+}
 
-export default FormsOpener;
+export default FormsOpener

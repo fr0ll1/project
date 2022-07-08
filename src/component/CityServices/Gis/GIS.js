@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import s from './gis.module.css'
 
 function Gis() {
 
@@ -6,7 +7,7 @@ function Gis() {
         <div>
             Gis
         </div>
-    );
+    )
 }
 
-export default Gis;
+export default Gis

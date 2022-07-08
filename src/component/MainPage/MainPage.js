@@ -1,15 +1,15 @@
-import React from "react";
-import {NavLink} from "react-router-dom";
-import style from "./MainPage.module.css"
+import React from 'react'
+import {NavLink} from 'react-router-dom'
+import s from './mainPage.module.css'
 
 function MainPage (){
 
     return(
-        <div className={style.MainPageWrapper}>
+        <div className={s.MainPageWrapper}>
             <h1>PersonalAccount</h1>
-            <div className={style.addOrg}>
+            <div className={s.addOrg}>
                 <NavLink to='/AddPage'>
-                <div className={style.NavLink}>
+                <div className={s.NavLink}>
                     Добавить организацию
                 </div>
                 </NavLink>
@@ -18,4 +18,4 @@ function MainPage (){
     )
 }
 
-export default MainPage;
+export default MainPage

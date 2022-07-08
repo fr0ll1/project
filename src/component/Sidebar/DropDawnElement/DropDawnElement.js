@@ -1,15 +1,13 @@
-import React from "react";
-import style from './DropDawnElement.module.css'
-
-
-import {NavLink} from "react-router-dom";
+import React from 'react'
+import s from './dropDawnElement.module.css'
+import {NavLink} from 'react-router-dom'
 
 function DropDawnElement(props) {
     return (
 
-        <div className={style.FullElement}>
+        <div className={s.FullElement}>
             <NavLink to={props.path}>
-                <div className={style.MenuBtn}>
+                <div className={s.MenuBtn}>
                     {props.icon}
                     {props.name}
                     {props.open}
@@ -20,4 +18,4 @@ function DropDawnElement(props) {
     )
 }
 
-export default DropDawnElement;
+export default DropDawnElement

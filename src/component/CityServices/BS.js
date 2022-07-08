@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 const Bs = () => {
     return (
         <div>
             <h1>Bs</h1>
         </div>
-    );
-};
+    )
+}
 
-export default Bs;
+export default Bs

@@ -1,15 +1,15 @@
-import React from "react";
-import style from './Elements.module.css'
+import React from 'react'
+import s from './elements.module.css'
 
 
-import {NavLink} from "react-router-dom";
+import {NavLink} from 'react-router-dom'
 
 function Elements(props) {
     return (
 
-        <div className={style.FullElement}>
+        <div className={s.FullElement}>
             <NavLink to={props.path}>
-                <div className={style.MenuBtn}>
+                <div className={s.MenuBtn}>
                     {props.icon}
                     {props.name}
                     {props.open}
@@ -19,6 +19,6 @@ function Elements(props) {
     )
 }
 
-export default Elements;
+export default Elements
 
 

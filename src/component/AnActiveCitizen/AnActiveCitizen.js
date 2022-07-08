@@ -1,19 +1,19 @@
-import React, {useState} from "react";
+import React, {useState} from 'react'
 
-import style from "./AnActiveCitizen.module.css";
+import s from './anActiveCitizen.module.css'
 
 
 const AnActiveCitizen = () => {
 
 
     return (
-        <div className={style.container}>
+        <div className={s.container}>
             AnActiveCitizen
         </div>
     )
 }
 
-export default AnActiveCitizen;
+export default AnActiveCitizen
 
 
 

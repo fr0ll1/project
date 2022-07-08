@@ -1,5 +1,5 @@
-import React from "react";
-import style from './OpeningElement.module.css'
+import React from 'react'
+import s from './openingElement.module.css'
 
 function Elements(props) {
 
@@ -12,8 +12,8 @@ function Elements(props) {
     }
 
     return (
-        <div className={style.FullElement}>
-            <div className={style.MenuBtn} onClick={openerHandler}>
+        <div className={s.FullElement}>
+            <div className={s.MenuBtn} onClick={openerHandler}>
                 {icon}
                 {name}
                 {arrowIcon(activeType)}
@@ -29,4 +29,4 @@ function Elements(props) {
     )
 }
 
-export default Elements;
+export default Elements

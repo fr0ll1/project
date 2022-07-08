@@ -1,18 +1,12 @@
-import React from 'react';
-import style from './Dash.module.css'
+import React from 'react'
+import s from './dash.module.css'
 
 const Dash = () => {
-
-
-
-
     return (
-        <div className={style.mainWrapper}>
+        <div className={s.mainWrapper}>
            Dash
         </div>
-
-
 )
-};
+}
 
-export default Dash;
+export default Dash

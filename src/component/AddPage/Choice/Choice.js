@@ -1,33 +1,33 @@
-import React, {useState} from 'react';
-import style from './Choice.module.css';
-import {ReactComponent as ArrowTop} from "../../../svg/arrow.svg";
-import {ReactComponent as ArrowBot} from "../../../svg/arrow-up_16.svg";
+import React, {useState} from 'react'
+import s from './choice.module.css'
+import {ReactComponent as ArrowTop} from '../../../svg/arrow.svg'
+import {ReactComponent as ArrowBot} from '../../../svg/arrow-up_16.svg'
 
 
 
 const Choice = (props) => {
-    const [active, setActive] = useState(false);
+    const [active, setActive] = useState(false)
 
 
-    const options = ['Тест1', 'Тест2', 'Тест3'];
+    const options = ['Тест1', 'Тест2', 'Тест3']
 
     const {isSelect, setIsSelect, setSelectError} = props
 
     return (
-        <div className={style.dropdown}>
-            <div className={style.dropdownBtn} onClick={() => {
+        <div className={s.dropdown}>
+            <div className={s.dropdownBtn} onClick={() => {
                 setActive(!active)
             }}>
-                <span className={style.oneEl}>{isSelect}</span>
+                <span className={s.oneEl}>{isSelect}</span>
                 {active === false ?
-                    (<span className={style.twoEl}><ArrowTop/></span>) :
-                    (<span className={style.twoEl}><ArrowBot color='blue'/></span>)
+                    (<span className={s.twoEl}><ArrowTop/></span>) :
+                    (<span className={s.twoEl}><ArrowBot color='blue'/></span>)
                 }
             </div>
             {active && (
-                <div className={style.dropdownContent}>
+                <div className={s.dropdownContent}>
                     {options.map(options => (
-                        <div className={style.dropdownItem} onClick={(e) => {
+                        <div className={s.dropdownItem} onClick={(e) => {
                             setIsSelect(options)
                             setActive(false)
                             setSelectError('')
@@ -40,8 +40,8 @@ const Choice = (props) => {
 
         </div>
 
-    );
+    )
 
-};
+}
 
-export default Choice;
+export default Choice

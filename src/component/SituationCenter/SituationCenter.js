@@ -1,13 +1,13 @@
-import React from 'react';
-import  style from './SituationCenter.module.css'
+import React from 'react'
+import  s from './situationCenter.module.css'
 
 const SituationCenter = () => {
 
     return (
-        <div className={style.MainWrapper}>
+        <div className={s.MainWrapper}>
             SituationCenter
         </div>
-    );
-};
+    )
+}
 
-export default SituationCenter;
+export default SituationCenter

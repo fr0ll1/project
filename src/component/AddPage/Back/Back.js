@@ -1,23 +1,23 @@
-import React from 'react';
-import {ReactComponent as LeftArrow} from "../../../svg/arrow-left_12.svg";
-import style from "./Back.module.css";
-import {NavLink} from "react-router-dom";
+import React from 'react'
+import {ReactComponent as LeftArrow} from '../../../svg/arrow-left_12.svg'
+import s from './back.module.css'
+import {NavLink} from 'react-router-dom'
 
 const Back = () => {
     return (
-            <div className={style.container}>
+            <div className={s.container}>
             <NavLink to='/'>
-                <div className={style.BackWrapper}>
-                <div className={style.icon}>
+                <div className={s.BackWrapper}>
+                <div className={s.icon}>
                     <LeftArrow/>
                 </div>
-                <p className={style.Text}>
+                <p className={s.Text}>
                     Назад
                 </p>
                 </div>
             </NavLink>
             </div>
-    );
-};
+    )
+}
 
-export default Back;
+export default Back
